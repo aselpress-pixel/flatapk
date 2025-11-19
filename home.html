@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="sw">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>flatBet</title>
+  <style>
+    :root{--accent:#ff7a18;--muted:#94a3b8;--card:#0b1220}
+    body{margin:0;min-height:100vh;background:linear-gradient(180deg,#081326,#051522);display:flex;align-items:center;justify-content:center;color:#e6eef8;font-family:Inter,ui-sans-serif;padding:32px}
+    .box{background:var(--card);padding:32px;border-radius:18px;max-width:420px;width:100%;text-align:center;box-shadow:0 8px 30px rgba(0,0,0,0.45)}
+    .logo{width:70px;height:70px;border-radius:16px;background:linear-gradient(135deg,var(--accent),#ffb569);display:grid;place-items:center;color:#05202a;font-weight:800;font-size:26px;margin:0 auto 18px}
+    h1{margin:0 0 8px;font-size:22px;font-weight:700}
+    p{margin:0 0 18px;color:var(--muted);font-size:14px}
+    a.btn{display:inline-block;text-decoration:none;background:linear-gradient(180deg,var(--accent),#ff5411);padding:14px 20px;border-radius:12px;color:#051426;font-weight:700;margin-top:8px}
+    button.copy{margin-top:10px;background:transparent;border:1px solid rgba(255,255,255,0.08);padding:10px 14px;border-radius:10px;color:var(--muted);cursor:pointer}
+    footer{margin-top:20px;font-size:12px;color:var(--muted)}
+  </style>
+</head>
+<body>
+  <div class="box">
+    <div class="logo" style="background:none;padding:0">
+      <img src="https://i.ibb.co/bgZ9SZDH/FlatBet.png" alt="FlatBet Logo" style="width:70px;height:70px;border-radius:16px;object-fit:cover;">
+    </div>
+    <h1>Pakua flatBet App</h1>
+    <p>Bofya hapa chini kupakua app ya flatBet (APK).</p>
+
+    <a class="btn" href="https://apk.e-droid.net/apk/app3821999-sfkz9d.apk?v=2" target="_blank">Download App (APK)</a>
+    <br>
+    <button class="copy" id="copyBtn">Nakili Link</button>
+
+    <footer>Link: https://apk.e-droid.net/apk/app3821999-sfkz9d.apk?v=2</footer>
+  </div>
+
+<script>
+  const copyBtn = document.getElementById('copyBtn');
+  copyBtn.addEventListener('click', ()=>{
+    const url = 'https://apk.e-droid.net/apk/app3821999-sfkz9d.apk?v=2';
+    navigator.clipboard?.writeText(url).then(()=>{
+      copyBtn.textContent = 'Imekopiwa!';
+      setTimeout(()=>copyBtn.textContent = 'Nakili Link', 1200);
+    });
+  });
+</script>
+</body>
+</html>
